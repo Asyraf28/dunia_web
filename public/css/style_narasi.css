@@ -1,0 +1,25 @@
+.cutscene-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+.dialog-box {
+    width: 80%;
+    background-color: rgba(10, 10, 10, 1);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }

@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Membuat kontainer memiliki tinggi penuh dari viewport */
+  /* text-align: justify; */
+}
+
+.left-side {
+  background-color: #f0f0f0; /* Warna latar belakang untuk bagian kiri */
+  overflow-y: auto; /* Menambahkan scroll jika konten terlalu panjang */
+  width: 70%;
+  padding: 50px;
+}
+
+.right-side {
+  background-color: #d0d0d0; /* Warna latar belakang untuk bagian kanan */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.right-side img {
+  max-width: 100%;
+  height: auto; /* Menjaga proporsi gambar */
+}
+
+.logout-button {
+  background-color: #ca46c4;
+  color: white;
+  padding: 5px 15px; /* Mengurangi padding untuk memperkecil tombol */
+  font-size: 0.8em; /* Mengurangi ukuran font */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin: 10px; /* Mengurangi margin */
+}

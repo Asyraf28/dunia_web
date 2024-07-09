@@ -1,0 +1,509 @@
+body {
+    background-size: cover;
+    height: 100vh;
+  
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .left-side {
+    background-color: #f0f0f0; /* Warna latar belakang untuk bagian kiri */
+    overflow-y: auto; /* Menambahkan scroll jika konten terlalu panjang */
+    width: 30%;
+    border-radius:10px;
+    padding: 50px;
+  }
+  
+  .right-side {
+    background-color: #d0d0d0; /* Warna latar belakang untuk bagian kanan */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius:10px;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .title-section {
+    text-align: center;
+    padding: 20px 50px;
+  }
+  
+  .title-section h1 {
+    font-size: 80px;
+    font-style: bold;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 
+    -2px -2px 0 #ca46c4,  
+    2px -2px 0 #ca46c4,
+    -2px 5px 0 #ca46c4,
+    2px 2px 0 #ca46c4;
+  }
+  .title-section h3 {
+    color: #d9ff4e;
+    font-size: 20px;
+    font-style: italic;
+    margin: 0;
+    text-shadow: 
+    -1px -1px 0 #ca46c4,  
+    1px -1px 0 #ca46c4,
+    -1px 2px 0 #ca46c4,
+    1px 1px 0 #ca46c4;
+  }
+  
+  footer {
+    background-color: #ffffff; 
+    color: #811f7c;
+    position: fixed; 
+    bottom: 0;
+    left: 0; 
+    right: 0; 
+    text-align: center; 
+    padding: 5px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .menu-container,
+  .login-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    /* display: flex; */
+  }
+  
+  .login-form,
+  .menu-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Menengahkan elemen dalam form */
+    /* height:420px;
+    width:1200px; */
+  }
+  
+  .login-form h1,
+  .menu-form h1 {
+    margin-bottom: 5px;
+    color: #811f7c;
+  }
+  
+  .button-container {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .button-sublevel{
+    text-align: left;
+    background-color: #c26bbf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    width: 500px;
+    transition: background-color 0.3s;
+  }
+  .button-sublevel-disable{
+    text-align: left;
+    background-color: #e090de;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    width: 500px;
+  }
+  .button-sublevel-done{
+    text-align: left;
+    color:#811f7c;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    width: 500px;
+  }
+
+  .button-sublevel:hover{
+    background-color:#a65ae4;
+  }
+
+  .player-button,
+  .admin-button,
+  .button{
+    background-color: #e22edc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+    position: relative;
+    display: inline-block;
+  }
+  
+
+    .button.disabled img {
+      filter: grayscale(100%) brightness(50%);
+    }
+
+    .button.disabled .locked-message {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .button.disabled:hover .locked-message {
+      display: block;
+    }
+
+  .logout-button {
+    background-color: #ca46c4;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 10px;
+  }
+  
+  .button:hover,
+  .logout-button:hover,
+  .player-button:hover,
+  .admin-button:hover {
+    background-color: #8e2ae0;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+
+
+  .login-form input[type="email"],
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 300px;
+    height: 31px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  
+  .login-form button[type="submit"] {
+    background-color: #e22edc;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .login-form button[type="submit"]:hover {
+    background-color: #8e2ae0;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  .menu-container h1 {
+    margin-bottom: 30px;
+  
+  }
+  
+  .button-container {
+    margin-bottom: 20px;
+  
+  }
+  
+  .menu-level-1 {
+    list-style: none;
+  }
+  
+  .menu-level-1 > li {
+    position: relative;
+  }
+  
+  .menu-level-1 a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #dd70d9;
+  }
+  
+  /* Level Menu*/
+  /* Style untuk level-grid */
+  .level-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+    grid-gap: 20px; /* Jarak antar grid */
+  }
+  
+  /* Style untuk setiap level button */
+  .level-grid .button {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+  }
+  
+  /* Style untuk gambar level */
+  .level-grid .button img {
+    width: 100%; /* Lebar gambar 100% dari parent */
+    height: 100%; /* Tinggi gambar menyesuaikan aspek ratio */
+    transition: transform 0.3s; /* Efek transition */
+  }
+  
+  /* Style untuk nama level */
+  .level-grid .button span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna background */
+    color: white;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: transform 0.3s; /* Efek transition */
+    transform: translateY(100%); /* Menggeser ke bawah di luar layar */
+  }
+  
+  .profil{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  color: #811f7c;
+  border-radius: 10px;
+  text-align: center;
+  width: 600px;
+}
+
+  /* Efek hover */
+  .level-grid .button:hover img {
+    transform: scale(1.2); /* Memperbesar gambar */
+  }
+  
+  .level-grid .button:hover span {
+    transform: translateY(0); /* Munculkan nama level */
+  }
+  
+  
+  
+  /* Setting Menu*/
+  
+  /* Untuk input range */
+  input[type="range"] {
+  
+    --track-color: #a65ae4;
+    --thumb-color: #8e2ae0;
+  
+    /* Mengubah tampilan default */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 7px;
+    background: var(--track-color);
+    border-radius: 5px;
+    outline: none;
+    margin: 10px 0;
+  }
+  
+  /* Untuk thumb (penanda) pada input range */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--thumb-color);
+    border-radius: 60%;
+    cursor: pointer;
+    border: none;
+    margin-top: -5px;
+  }
+  
+  /* Untuk input radio */
+  input[type="radio"] {
+    --radio-color: #8e2ae0;
+  
+    /* Menyembunyikan radio default */
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--radio-color);
+    margin-right: 5px;
+  }
+  
+  /* Ketika radio dipilih */
+  input[type="radio"]:checked {
+    background-color: var(--radio-color);
+  }
+  
+  
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .container {
+      max-width: 600px;
+      margin: 10px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+      text-align: center;
+  }
+  
+  .setting-item {
+      margin-bottom: 20px;
+      display:flex;
+    }
+    
+    label {
+      display: block;
+      margin-right:10px;
+    }
+  
+  input[type="checkbox"] {
+      margin-right: 10px;
+  }
+  
+  input[type="range"] {
+      width: 100%;
+  }
+  
+  select {
+      width: 100%;
+      padding: 5px;
+  }
+  
+  /*Menu Materi*/
+  /* Umum */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: auto; /* Menengahkan h1 */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th {
+    border: 1px solid #ddd ;
+    padding: 8px;
+    text-align: left;
+    background-color:#e090de;
+  }
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  tr {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #dd70d9;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .soal {
+    display: block;
+    text-decoration: none;
+    padding: 10px 0; /* Atur padding sesuai kebutuhan */
+  }
+
+  
+  /* overlay notifikasi */
+  #notif-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Warna hitam dengan transparansi 50% */
+    z-index: 9999; /* Pastikan notifikasi overlay ada di atas konten lain */
+  }
+  .overlay-text {
+    position: absolute;
+    z-index: 90009;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    padding: 20px; /* Menambah padding untuk memberikan ruang di sekitar teks */
+    background-color: #a716a2; /* Warna latar belakang dengan transparansi 70% */
+    border-radius: 10px; /* Mengatur sudut border untuk membuatnya lebih bulat */
+    text-align: left;
+  }
+
+  #notif-image {
+    position: absolute;
+    z-index: 100000;
+    top: 21%;
+    left: 50px; /* Adjust the left position as needed */
+    bottom:0px;
+    width: 650px; /* Adjust the width as needed */
+    height: auto;
+  }
+
+  
